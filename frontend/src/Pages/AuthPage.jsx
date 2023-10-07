@@ -1,17 +1,17 @@
 import React from 'react'
 import Header from '../components/Layout/Header/Header'
+import Auth from '../components/Auth/Auth'
 import Policy from '../components/Layout/Policy/Policy'
 import Footer from '../components/Layout/Footer/Footer'
-import Contact from '../components/Contact/Contact'
 
-const ContactPage = () => {
+const AuthPage = () => {
   return (
     <React.Fragment>
-      <Header/>
-      <Contact/>
-      <Footer/>
+        <Header/>
+        <Auth/>
+        <Footer/>
     </React.Fragment>
   )
 }
 
-export default ContactPage
+export default AuthPage

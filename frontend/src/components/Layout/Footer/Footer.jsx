@@ -1,8 +1,11 @@
 import React from 'react'
 import "./Footer.css"
+import Policy from '../Policy/Policy'
 const Footer = () => {
   return (
-    <footer className="footer">
+    <React.Fragment>
+      <Policy/>
+      <footer className="footer">
   <div className="subscribe-row">
     <div className="container">
       <div className="footer-row-wrapper">
@@ -178,6 +181,7 @@ const Footer = () => {
     </div>
   </div>
 </footer>
+    </React.Fragment>
 
   )
 }
