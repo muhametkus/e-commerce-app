@@ -5,11 +5,7 @@ import BlogDetails from '../components/BlogDetails/BlogDetails'
 
 const BlogDeatilsPage = () => {
   return (
-    <React.Fragment>
-      <Header/>
       <BlogDetails/>
-      <Footer/>
-    </React.Fragment>
   )
 }
 

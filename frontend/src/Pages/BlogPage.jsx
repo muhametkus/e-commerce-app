@@ -5,11 +5,7 @@ import Footer from '../components/Layout/Footer/Footer'
 
 const BlogPage = () => {
   return (
-    <React.Fragment>
-        <Header/>
         <div className='blog-page'><Blogs/></div>
-        <Footer/>
-    </React.Fragment>
   )
 }
 

@@ -6,11 +6,7 @@ import Footer from '../components/Layout/Footer/Footer'
 
 const AuthPage = () => {
   return (
-    <React.Fragment>
-        <Header/>
         <Auth/>
-        <Footer/>
-    </React.Fragment>
   )
 }
 

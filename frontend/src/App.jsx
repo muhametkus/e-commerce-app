@@ -11,11 +11,12 @@ import CartPage from "./Pages/CartPage";
 import CartTotals from "./components/Cart/CartTotals";
 import BlogPage from "./Pages/BlogPage";
 import BlogDeatilsPage from "./Pages/BlogDeatilsPage";
+import ProductDetailsPage from "./Pages/ProductDetailsPage";
 
 function App() {
   return (
     <React.Fragment>
-      <BlogDeatilsPage/>
+      <ProductDetailsPage/>
     </React.Fragment>
   );
 }
