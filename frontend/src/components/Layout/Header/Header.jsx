@@ -1,7 +1,8 @@
 import "./Header.css"
 import React from 'react'
+import PropTypes from "prop-types"
 
-const Header = () => {
+const Header = ({setIsSearchShow}) => {
   return (
     <header>
   <div className="global-notification">
@@ -179,7 +180,7 @@ const Header = () => {
             <a href="account.html" className="header-account">
               <i className="bi bi-person" />
             </a>
-            <button className="search-button">
+            <button className="search-button" onClick={()=>setIsSearchShow(true)} >
               <i className="bi bi-search" />
             </button>
             <a href="#">
@@ -202,3 +203,7 @@ const Header = () => {
 }
 
 export default Header
+
+Header.protoTypes={
+  setIsSearchShow:PropTypes.func,
+}
