@@ -1,7 +1,62 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./Products.css"
 import ProductItem from './ProductItem'
-const Product = () => {
+import ProductsData from "../../data.json"
+import Slider from "react-slick";
+import PropTypes from "prop-types"
+
+
+function NextBtn({onClick}){
+  return(
+    <button className="glide__arrow glide__arrow--right" onClick={onClick}>
+          <i className="bi bi-chevron-right" />
+        </button>
+  )
+}
+
+NextBtn.protoTypes={
+  onClick: PropTypes.func,
+}
+
+function PrevBtn({onClick}){
+  return(
+    <button className="glide__arrow glide__arrow--left" onClick={onClick}>
+          <i className="bi bi-chevron-left" />
+        </button>
+  )
+}
+
+PrevBtn.protoTypes={
+  onClick: PropTypes.func,
+}
+
+const Products = () => {
+  const [products, setProducts]=useState(ProductsData)
+
+  const sliderSettings={
+    dots: false,
+    infinite: true,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    nextArrow: <NextBtn/>,
+    prevArrow:<PrevBtn/>,
+    autoplay:true,
+    autoplaySpeed: 2000,
+    responsive:[
+      {
+        breakpoint:992,
+        settings:{
+          slidesToShow:2
+        },
+      },
+      {
+        breakpoint:520,
+        settings:{
+          slidesToShow:1
+        },
+      }
+    ]
+  }
   return (
     <section className="products">
   <div className="container">
@@ -11,22 +66,17 @@ const Product = () => {
     </div>
     <div className="product-wrapper product-carousel">
       <div className="glide__track" >
-        <ul className="product-list glide__slides" id="product-list" > 
-       
-        <ProductItem/>
-        <ProductItem/>
-        <ProductItem/>
-        <ProductItem/>
+        <Slider {...sliderSettings}>
+          {products.map((product)=>(
+          <ProductItem product={product} key={product.id}/>
+        ))}
+        </Slider>
+
         
-        </ul>
       </div>
       <div className="glide__arrows" >
-        <button className="glide__arrow glide__arrow--left" >
-          <i className="bi bi-chevron-left" />
-        </button>
-        <button className="glide__arrow glide__arrow--right" >
-          <i className="bi bi-chevron-right" />
-        </button>
+
+        
       </div>
     </div>
   </div>
@@ -35,4 +85,4 @@ const Product = () => {
   )
 }
 
-export default Product
+export default Products

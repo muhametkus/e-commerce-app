@@ -1,7 +1,7 @@
 import React from 'react'
 import Slider from '../components/Slider/Slider'
 import Categories from '../components/Categories/Categories'
-import Product from '../components/Products/Products'
+import Products from '../components/Products/Products'
 import Campaigns from '../components/Campaigns/Campaigns'
 import Blogs from '../components/Blogs/Blogs'
 import Brands from '../components/Brands/Brands'
@@ -11,9 +11,9 @@ const HomePage = () => {
     <React.Fragment>
     <Slider/>
     <Categories/>
-    <Product/>
+    <Products/>
     <Campaigns/>
-    <Product/>
+    <Products/>
     <Blogs/>
     <Brands/>
     <CampaignSingle/>

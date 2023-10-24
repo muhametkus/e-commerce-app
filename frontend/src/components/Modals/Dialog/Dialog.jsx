@@ -3,11 +3,10 @@ import './Dialog.css'
 import PropTypes from "prop-types"
 const Dialog = ({isDialogShow, setIsDialogShow}) => {
 
-  const handleCloseDialog=(event)=>{
-    const checked=event.target.checked;
+  const handleCloseDialog = (event) => {
+    const checked = event.target.checked;
     localStorage.setItem("dialog", JSON.stringify(!checked))
-
-  }
+  };
 
   return (
     <div className={`modal-dialog ${isDialogShow ? "show": ""}`}>

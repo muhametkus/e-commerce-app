@@ -1,10 +1,11 @@
 import React from 'react'
+import PropTypes from "prop-types"
 
-const SliderItem = () => {
+const SliderItem = ({imageSrc}) => {
   return (
     <div className="slider-item fade">
       <div className="slider-image">
-        <img src="img/slider/slider1.jpg" className="img-fluid" alt="" />
+        <img src={imageSrc} className="img-fluid" alt="" />
       </div>
       <div className="container">
         <p className="slider-title">SUMMER 2022</p>
@@ -15,4 +16,8 @@ const SliderItem = () => {
   )
 }
 
-export default SliderItem
+export default SliderItem;
+
+SliderItem.protoTypes={
+  imageSrc: PropTypes.string,
+}
